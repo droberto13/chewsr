@@ -1,0 +1,47 @@
+const foods = [
+	{ title: 'Stones', link: 'http://www.stonesfood.com' },
+	{ title: 'EDEKA', link: 'https://www.edeka.de/homepage.jsp' },
+	{ title: 'Soul Food Factory', link: 'http://soul-food-factory.com' },
+	{ title: 'Der Thai hier unten', link: '#' },
+	{ title: 'Der Thai da oben (CocoThai)', link: 'http://www.cocothai-bornheim.de' },
+	{ title: 'Quantum', link: 'http://quantum-ffm.de' },
+	{ title: 'Ufra Kebabhaus', link: '#' },
+	{ title: 'Vapiano', link: 'https://de.vapiano.com/de/magazine/' },
+	{ title: 'Gref Voelsings', link: 'http://www.gref-voelsings.de' },
+	{ title: 'La Palma', link: 'http://lapalma-ffm.com' },
+	{ title: 'Coffee Fellows', link: 'https://www.coffee-fellows.com' },
+	{ title: 'The Tasty Toast', link: 'http://thetastytoast.de' },
+	{ title: 'Frankfurter Küche', link: 'http://www.restaurant-frankfurter-kueche.de' }
+]
+
+const current = new Date()
+
+if (current.getDay()===3) {
+	
+	foods.push({ title: 'Burrito Bande', link: 'http://www.burritobande.de' })
+	foods.push({ title: 'Frankfurter Garten', link: 'http://frankfurter-garten.de' })
+	
+}
+
+const easeOutExpo = function(t, b, c, d) {
+	
+	return c * Math.pow( 2, 10 * (t/d - 1) ) + b;
+	
+}
+
+const newFood = function(elem) {
+		
+	const food = foods[Math.floor(Math.random() * foods.length)]
+
+	elem.innerHTML = food.title
+	elem.href      = food.link
+		
+}
+
+for (var i = 0; i < 100; i++) {
+
+	const delay = easeOutExpo(i, 0, 3000, 100)
+			
+	setTimeout(() => newFood(document.querySelector('.food')), delay)
+	
+}

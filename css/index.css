@@ -1,0 +1,49 @@
+@import "https://fonts.googleapis.com/css?family=Mada";
+
+body{
+  
+  font-family: 'Mada', sans-serif;
+}
+
+.search {
+  width: 100%;
+  position: relative
+}
+
+.searchTerm {
+  float: left;
+  width: 100%;
+  border: 3px solid #ffffff;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px;
+  outline: none;
+  color: #99C49A;
+}
+
+.searchTerm:focus{
+  color: #99C49A;
+}
+
+.searchButton {
+  position: absolute;  
+  right: -50px;
+  width: 40px;
+  height: 36px;
+  border: 1px solid #ffffff;
+  background: #ffffff;
+  text-align: center;
+  color: #99C49A;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

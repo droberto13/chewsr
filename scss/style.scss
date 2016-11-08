@@ -1,0 +1,21 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: #dd3954;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.food {
+	color: white;
+	text-decoration: none;
+	font-size: 3em;
+	font-weight: 200;
+	
+	&:hover {
+		text-decoration: underline;
+	}
+}

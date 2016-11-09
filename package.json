@@ -1,0 +1,23 @@
+{
+  "name": "droberto13",
+  "version": "0.0.1",
+  "author": "Daniel Roberto",
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/droberto13/chewsr"
+  },
+  "license": "MIT",
+
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "3.x",
+    "express3-handlebars": "*"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }  
+}

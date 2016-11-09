@@ -1,21 +1,33 @@
-var foods = [{
-	"title": "Tajima Izakaya",
+var mexican = [{
+	"title": "Cocina 35",
 	"link": "https://www.yelp.com/biz/tajima-izakaya-san-diego-5"
 }, {
-	"title": "Yakitori Yakyudori & Ramen",
+	"title": "The Taco Stand",
 	"link": "https://www.yelp.com/biz/yakitori-yakyudori-and-ramen-san-diego?search_key=66803"
 }, {
-	"title": "Wa Dining OKAN",
+	"title": "Old Gallery Coffee House",
 	"link": "https://www.yelp.com/biz/wa-dining-okan-san-diego-2?search_key=66803"
 }, {
-	"title": "Tajima Ramen House",
+	"title": "Valentines Mexican Food",
 	"link": "https://www.yelp.com/biz/tajima-ramen-house-san-diego-10?search_key=66803"
 }, {
-	"title": "Rakiraki Ramen & Tsukemen",
+	"title": "Alamilla's Mexican Food",
 	"link": "https://www.yelp.com/biz/rakiraki-ramen-and-tsukemen-san-diego?search_key=66803"
 }, {
-	"title": "Izakaya Kanpai",
+	"title": "Lucy's Taco Shop",
 	"link": "https://www.yelp.com/biz/izakaya-kanpai-san-diego-4?search_key=66803"
+}, {
+	"title": "Il Fornaio",
+	"link": "https://www.yelp.com/biz/yakitori-yakyudori-and-ramen-san-diego?search_key=66803"
+}, {
+	"title": "La Cocina Loca",
+	"link": "https://www.yelp.com/biz/wa-dining-okan-san-diego-2?search_key=66803"
+}, {
+	"title": "Mariscos Mi Gusto Es",
+	"link": "https://www.yelp.com/biz/tajima-ramen-house-san-diego-10?search_key=66803"
+}, {
+	"title": "La Puerta",
+	"link": "https://www.yelp.com/biz/rakiraki-ramen-and-tsukemen-san-diego?search_key=66803"
 }];
 var current = new Date();
 

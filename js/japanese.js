@@ -25,13 +25,15 @@ function initMap() {
 
 
 /*
- * Creates an array containing the names of locations based on above search
+ * Creates array containing the locations based on above search
  */
 var names = [];
 function callback(results, status) {
   if (status === google.maps.places.PlacesServiceStatus.OK) {
     for (var i = 0; i < results.length; i++) {
-      names.push(results[i].name);
+      if(results[i].opening_hours.open_now){ //only shows locations currently open
+        names.push(results[i].name);
+      }
     }
   }
 }
@@ -47,9 +49,15 @@ var easeOutExpo = function easeOutExpo(t, b, c, d) {
 };
 
 var newFood = function newFood(elem) {
-  var food = names[Math.floor(Math.random() * names.length)];
-  elem.innerHTML = food;
-  //TODO display other information? images, ratings, etc.?
+  if(names.length == 0){ //if 0 results
+    elem.innerHTML = "No results found :(";
+  }
+  else{
+    var index = Math.floor(Math.random() * names.length);
+    var food = names[index];
+    elem.innerHTML = food;
+    //TODO display other information? images, ratings, etc.?
+  }
 };
 for (var i = 0; i < 100; i++) {
   var delay = easeOutExpo(i, 0, 3000, 100);

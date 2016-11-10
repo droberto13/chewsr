@@ -1,0 +1,36 @@
+@import "https://fonts.googleapis.com/css?family=Mada";
+
+html{
+  	margin:0;
+  	padding:0;
+  	height:100%;
+  	width:100%;
+}
+
+body{
+  	margin:0;
+  	padding:0;
+  	height:100%;
+  	width:100%;
+  	background: #99C49A;
+  	font-family: 'Mada', sans-serif;
+}
+
+button{
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.container{
+	text-align: center;
+	font-size: 75px;
+	margin-top: 25%;
+}
+
+.container > .w3-animate-opacity > .food{
+	text-decoration:none;
+	color:white;
+	font-weight: bold;
+}

@@ -1,23 +1,33 @@
 <!DOCTYPE html>
-<html >
-<head>
-  <meta charset="UTF-8">
-  <title>What should I eat today?</title>
+<html>
+	<head>
+  	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<title>What should I eat today?</title>
   
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
-  
-      <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/italian.css">
+    <script>
+      function goBack(){
+        window.history.back();
+      }
+    </script>
+  </head>
 
-  
-</head>
 
-<body>
-<div class="w3-animate-opacity">
-  <a class="food" target="_blank"></a>
-  
-    <script src="js/italian.js"></script>
-</div>
+	<body>
 
-</body>
+      <div align="left">
+        <button onclick="goBack()">Go Back</button>
+      </div>
+
+    <div class="container">
+		  <div class="w3-animate-opacity">
+  		  <a class="food" target="_blank"></a>
+        <script src="js/italian.js"></script>
+		  </div>
+    </div>
+	</body>
+
 </html>

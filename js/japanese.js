@@ -1,42 +1,54 @@
-var japanese = [{
-	"title": "Tajima Izakaya",
-	"link": "https://www.yelp.com/biz/tajima-izakaya-san-diego-5"
-}, {
-	"title": "Yakitori Yakyudori & Ramen",
-	"link": "https://www.yelp.com/biz/yakitori-yakyudori-and-ramen-san-diego?search_key=66803"
-}, {
-	"title": "Wa Dining OKAN",
-	"link": "https://www.yelp.com/biz/wa-dining-okan-san-diego-2?search_key=66803"
-}, {
-	"title": "Tajima Ramen House",
-	"link": "https://www.yelp.com/biz/tajima-ramen-house-san-diego-10?search_key=66803"
-}, {
-	"title": "Rakiraki Ramen & Tsukemen",
-	"link": "https://www.yelp.com/biz/rakiraki-ramen-and-tsukemen-san-diego?search_key=66803"
-}, {
-	"title": "Izakaya Kanpai",
-	"link": "https://www.yelp.com/biz/izakaya-kanpai-san-diego-4?search_key=66803"
-}];
+var map;
+var infowindow;
+
+/*
+ * The results are taken from Google Maps API
+ */
+function initMap() {
+  var pyrmont = {lat: 32.880621, lng: -117.238955}; //TODO this only finds places close to UCSD
+
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: pyrmont,
+    zoom: 15
+  });
+
+  infowindow = new google.maps.InfoWindow();
+  var service = new google.maps.places.PlacesService(map);
+  service.nearbySearch({
+    location: pyrmont,
+    keyword: "japanese",
+    radius: 8000, //TODO make this radius (in meters) customizable
+    type: ['restaurant']
+  }, callback);
+}
+
+/*
+ * Creates an array containing the names of locations based on above search
+ */
+var japanese = [];
+function callback(results, status) {
+  if (status === google.maps.places.PlacesServiceStatus.OK) {
+    for (var i = 0; i < results.length; i++) {
+      japanese.push(results[i].name);
+    }
+  }
+}
+
+/*
+ * Randomizer code
+ */
 var current = new Date();
-
 var easeOutExpo = function easeOutExpo(t, b, c, d) {
-
-	return c * Math.pow(2, 10 * (t / d - 1)) + b;
+  return c * Math.pow(2, 10 * (t / d - 1)) + b;
 };
 
 var newFood = function newFood(elem) {
-
-	var food = japanese[Math.floor(Math.random() * japanese.length)];
-
-	elem.innerHTML = food.title;
-	elem.href = food.link;
+  var food = japanese[Math.floor(Math.random() * japanese.length)];
+  elem.innerHTML = food;
 };
-
 for (var i = 0; i < 100; i++) {
-
-	var delay = easeOutExpo(i, 0, 3000, 100);
-
-	setTimeout(function () {
-		return newFood(document.querySelector('.food'));
-	}, delay);
+  var delay = easeOutExpo(i, 0, 3000, 100);
+  setTimeout(function () {
+    return newFood(document.querySelector('.food'));
+  }, delay);
 }

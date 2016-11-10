@@ -1,13 +1,73 @@
 @import "https://fonts.googleapis.com/css?family=Mada";
 
+html{
+  margin:0;
+  padding:0;
+  height:100%;
+  width:100%;
+  overflow::hidden;
+}
+
 body{
+  margin:0;
+  padding:0;
+  height:100%;
+  width:100%;
   background: #99C49A;
   font-family: 'Mada', sans-serif;
 }
 
+.nav{
+  background-color:gray;
+  color:#000000;
+  list-style:none;
+  text-align:right;
+  padding: 20px 0 20px 0;
+}
+
+.nav > li{
+  display:inline-block;
+  padding: 0 25px 0 25px;
+  font-size: 20px;
+}
+
+.nav > li > a{
+  text-decoration: none;
+  color:white;
+}
+
+.nav > li >a:hover{
+  color:#c1c1c1;
+}
+
+.logo{
+  color:#000000;
+  text-align: center;
+  padding-top: 20px;
+  padding-left: 25px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.logo > a{
+  text-decoration: none;
+  color:black;
+}
+
+.banner{
+  width:100%;
+  display:block;
+}
+
+.banner > .banner-image{
+  width:100%;
+  display:block;
+}
+
 .search {
   width: 100%;
-  position: relative
+  position: center;
+  padding:0 0 5px 0;
 }
 
 .searchTerm {
@@ -27,7 +87,7 @@ body{
 
 .searchButton {
   position: absolute;  
-  right: -50px;
+  right: -15px;
   width: 40px;
   height: 36px;
   border: 1px solid #ffffff;
@@ -41,23 +101,22 @@ body{
 
 /*Resize the wrap to see the search bar change!*/
 .wrap{
-  width: 30%;
+  width: 50%;
   position: absolute;
-  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 .container {
   display: flex;
-  width: 500px;
-  height: 500px;
+  width: 50%;
   margin: auto;
-  text-alignt: center;
+  text-align: center;
+  padding: 30px 0 0 0;
 }
 
 .slider {
   width: 100%;
-  margin: 50% auto;
+  margin: auto;
 }
 
 input[type="range"] {

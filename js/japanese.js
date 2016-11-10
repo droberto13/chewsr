@@ -1,11 +1,11 @@
-var map;
-var infowindow;
-
 /*
  * The results are taken from Google Maps API
+ * Refer to https://developers.google.com/maps/documentation/javascript/places
  */
+var map;
+var infowindow;
 function initMap() {
-  var pyrmont = {lat: 32.880621, lng: -117.238955}; //TODO this only finds places close to UCSD
+  var pyrmont = {lat: 32.880621, lng: -117.238955}; //TODO this only finds places close to UCSD, make this current location
 
   map = new google.maps.Map(document.getElementById('map'), {
     center: pyrmont,
@@ -16,23 +16,27 @@ function initMap() {
   var service = new google.maps.places.PlacesService(map);
   service.nearbySearch({
     location: pyrmont,
-    keyword: "japanese",
-    radius: 8000, //TODO make this radius (in meters) customizable
-    type: ['restaurant']
+    keyword: "japanese", //this is the keyword to search places for
+    radius: 8000, //TODO make this radius (in meters) customizable based off index screen
+    type: ['restaurant'] //you could also change this too if you like; for list of types see https://developers.google.com/places/supported_types
   }, callback);
 }
+
+
 
 /*
  * Creates an array containing the names of locations based on above search
  */
-var japanese = [];
+var names = [];
 function callback(results, status) {
   if (status === google.maps.places.PlacesServiceStatus.OK) {
     for (var i = 0; i < results.length; i++) {
-      japanese.push(results[i].name);
+      names.push(results[i].name);
     }
   }
 }
+
+
 
 /*
  * Randomizer code
@@ -43,8 +47,9 @@ var easeOutExpo = function easeOutExpo(t, b, c, d) {
 };
 
 var newFood = function newFood(elem) {
-  var food = japanese[Math.floor(Math.random() * japanese.length)];
+  var food = names[Math.floor(Math.random() * names.length)];
   elem.innerHTML = food;
+  //TODO display other information? images, ratings, etc.?
 };
 for (var i = 0; i < 100; i++) {
   var delay = easeOutExpo(i, 0, 3000, 100);

@@ -20,9 +20,16 @@ body {
 .food {
   color: white;
   text-decoration: none;
-  font-size: 3em;
+  font-size: 30px;
   font-weight: 200;
 }
 .food:hover {
   text-decoration: underline;
+}
+
+.rate {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 200;
 }

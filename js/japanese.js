@@ -4,6 +4,7 @@
  */
 var map;
 var infowindow;
+var service;
 function initMap() {
   var pyrmont = {lat: 32.880621, lng: -117.238955}; //TODO this only finds places close to UCSD, make this current location
 
@@ -13,7 +14,7 @@ function initMap() {
   });
 
   infowindow = new google.maps.InfoWindow();
-  var service = new google.maps.places.PlacesService(map);
+  service = new google.maps.places.PlacesService(map);
   service.nearbySearch({
     location: pyrmont,
     keyword: "japanese", //this is the keyword to search places for
@@ -28,13 +29,16 @@ function initMap() {
  * Creates array containing the locations based on above search
  */
 var names = [];
+var rating = [];
 function callback(results, status) {
   if (status === google.maps.places.PlacesServiceStatus.OK) {
     for (var i = 0; i < results.length; i++) {
-      if(results[i].opening_hours.open_now){ //only shows locations currently open
+//      if(results[i].opening_hours.open_now){ //only shows locations currently open
         names.push(results[i].name);
-      }
+        rating.push(results[i].rating);
+//      }
     }
+    randomize();
   }
 }
 
@@ -44,6 +48,26 @@ function callback(results, status) {
  * Randomizer code
  */
 var current = new Date();
+var index;
+var randomize = function randomize(){
+  for (var i = 0; i < 100; i++) {
+    var delay = easeOutExpo(i, 0, 3000, 100);
+    setTimeout(function () {
+      return newFood(document.querySelector('.food'));
+    }, delay);
+  }
+  /*
+  service.getDetails(placeid[index], function(place, status){
+    if(status == google.maps.places.PlacesServiceStatus.OK){
+      for(var i = 0; i < place.photos.length; i++){
+        var img = photos[i].getURL();
+        document.getElementById('foodpic').src = img;
+      }
+    }
+  });
+  */
+};
+
 var easeOutExpo = function easeOutExpo(t, b, c, d) {
   return c * Math.pow(2, 10 * (t / d - 1)) + b;
 };
@@ -53,15 +77,10 @@ var newFood = function newFood(elem) {
     elem.innerHTML = "No results found :(";
   }
   else{
-    var index = Math.floor(Math.random() * names.length);
+    index = Math.floor(Math.random() * names.length);
     var food = names[index];
+    var rat = rating[index];
     elem.innerHTML = food;
-    //TODO display other information? images, ratings, etc.?
+    document.querySelector('.rating').innerHTML = rat;
   }
 };
-for (var i = 0; i < 100; i++) {
-  var delay = easeOutExpo(i, 0, 3000, 100);
-  setTimeout(function () {
-    return newFood(document.querySelector('.food'));
-  }, delay);
-}

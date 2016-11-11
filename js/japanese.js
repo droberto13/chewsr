@@ -29,13 +29,13 @@ function initMap() {
  * Creates array containing the locations based on above search
  */
 var names = [];
-var placeid = [];
+var rating = [];
 function callback(results, status) {
   if (status === google.maps.places.PlacesServiceStatus.OK) {
     for (var i = 0; i < results.length; i++) {
 //      if(results[i].opening_hours.open_now){ //only shows locations currently open
         names.push(results[i].name);
-        placeid.push(results[i].place_id);
+        rating.push(results[i].rating);
 //      }
     }
     randomize();
@@ -79,8 +79,8 @@ var newFood = function newFood(elem) {
   else{
     index = Math.floor(Math.random() * names.length);
     var food = names[index];
+    var rat = rating[index];
     elem.innerHTML = food;
-    //TODO display other information? images, ratings, etc.?
+    document.querySelector('.rating').innerHTML = rat;
   }
 };
-

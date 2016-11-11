@@ -81,6 +81,11 @@ var newFood = function newFood(elem) {
     var food = names[index];
     var rat = rating[index];
     elem.innerHTML = food;
-    document.querySelector('.rating').innerHTML = rat;
+    if(rat == undefined){
+      document.querySelector('.rating').innerHTML = "None Available";
+    }
+    else{
+      document.querySelector('.rating').innerHTML = rat + "/5.0";
+    }
   }
 };

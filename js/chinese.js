@@ -69,6 +69,10 @@ var randomize = function randomize(){
   */
 };
 
+var easeOutExpo = function easeOutExpo(t, b, c, d) {
+  return c * Math.pow(2, 10 * (t / d - 1)) + b;
+};
+
 var newFood = function newFood(elem) {
   if(names.length == 0){ //if 0 results
     elem.innerHTML = "No results found :(";

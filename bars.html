@@ -1,23 +1,39 @@
 <!DOCTYPE html>
-<html >
-<head>
-  <meta charset="UTF-8">
-  <title>What should I eat today?</title>
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-
-  
-      <link rel="stylesheet" href="css/style.css">
-
-  
-</head>
-
-<body>
-<div class="w3-animate-opacity">
-  <a class="food" target="_blank"></a>
-  
+<html>
+  <head>
+    <title>What should I eat today?</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/map.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/filters.css">
+    <script src="jquery-3.1.1.min.js"></script>
     <script src="js/bars.js"></script>
-</div>
+  </head>
+  <body>
+    <div id="map"></div>
 
-</body>
+    <div class="w3-animate-opacity">
+      <a class="food" target="_blank"></a>
+      <br>
+      <div class="rate">
+        Rating: 
+        <a class="rating" target="_blank"></a>
+        /5.0
+      </div>
+      <div class='flat-button' button onclick="randomize()" id="reset">
+        Spin Again
+      </div>
+      <a href="filters.html">
+        <div class='flat-button'>
+          Back
+        </div>
+      </a>
+
+      <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAce-I3v60ob7nsN8pBKnK-1qny_5SJrcw&libraries=places&callback=initMap" async defer></script>
+  </body>
 </html>

@@ -69,10 +69,6 @@ var randomize = function randomize(){
   */
 };
 
-var easeOutExpo = function easeOutExpo(t, b, c, d) {
-  return c * Math.pow(2, 10 * (t / d - 1)) + b;
-};
-
 var newFood = function newFood(elem) {
   if(names.length == 0){ //if 0 results
     elem.innerHTML = "No results found :(";
@@ -82,6 +78,11 @@ var newFood = function newFood(elem) {
     var food = names[index];
     var rat = rating[index];
     elem.innerHTML = food;
-    document.querySelector('.rating').innerHTML = rat;
+    if(rat == undefined){
+      document.querySelector('.rating').innerHTML = "None Available";
+    }
+    else{
+      document.querySelector('.rating').innerHTML = rat + "/5.0";
+    }
   }
 };

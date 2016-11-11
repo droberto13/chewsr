@@ -10,7 +10,7 @@ body {
   height: 60px;
   background: #ffffff;
   margin: 0 auto;
-  margin-top: 15px;
+  margin-top: 10px;
   overflow: hidden;
   z-index: 1;
   cursor: pointer;
@@ -36,4 +36,13 @@ body {
 .flat-button:hover::after {
   transform: translateY(-80%);
   transition: transform .3s;
+}
+
+#back{
+  background: #494949;
+  color: #ffffff;
+}
+
+#back:after{
+  background: #333333;
 }

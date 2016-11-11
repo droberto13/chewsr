@@ -1,3 +1,4 @@
+
 /*
  * The results are taken from Google Maps API
  * Refer to https://developers.google.com/maps/documentation/javascript/places

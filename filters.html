@@ -9,10 +9,69 @@
   
       <link rel="stylesheet" href="css/filters.css">
 <meta name="viewport" content="width=device-width, initial-scale=0.9">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+      <link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+  
+      <link rel="stylesheet" href="css/index.css">
+      <link rel="stylesheet" href="css/title.css">
+      <link rel="stylesheet" href="css/menu.css">
   
 </head>
-<div align="center"<h2> Choose a category</h2></div>
 <body>
+
+<header>
+<div align="center"<h1><font color ="white">CHEWSR</font></h1></div>
+      <button class="hamburger">&#9776;</button>
+  <button class="cross">&#735;</button>
+  <button class="back" onclick="goBack()">&#8592;</button>
+
+  </header>
+  <div align="center"<h2> <font color ="white">Choose a category</font></h2></div>
+<script>
+function goBack(){
+  window.history.back();
+}
+</script>
+  <div class="menu">
+  <ul>
+    <a href="index.html"><li>Home</li></a>
+    <a href="about.html"><li>About Chewsr</li></a>
+    <a href="settings.html"><li>Settings</li></a>
+  </ul>
+</div>
+
+
+<a href="american.html">
+  <div class='flat-button'>
+  American
+</div>
+</a>
+
+<a href="bars.html">
+  <div class='flat-button'>
+  Bars/Nightlife
+</div>
+</a>
+
+<a href="cafes.html">
+  <div class='flat-button'>
+  Cafes
+</div>
+</a>
+
+<a href="chinese.html">
+  <div class='flat-button'>
+  Chinese
+</div>
+</a>
+
+<a href="italian.html">
+  <div class='flat-button'>
+  Italian
+</div>
+</a>
+
 <a href="japanese.html">
   <div class='flat-button'>
   Japanese
@@ -25,31 +84,6 @@
 </div>
 </a>
 
-<a href="chinese.html">
-  <div class='flat-button'>
-  Chinese
-</div>
-</a>
-
-<a href="american.html">
-  <div class='flat-button'>
-  American
-</div>
-</a>
-
-<a href="Italian.html">
-  <div class='flat-button'>
-  Italian
-</div>
-</a>
-
-<a href="bars.html">
-  <div class='flat-button'>
-  Bars/Nightlife
-</div>
-</a>
-
-
 <a href="seafood.html">
   <div class='flat-button'>
   Seafood
@@ -57,12 +91,11 @@
 </a>
 
 
-<a href="cafes.html">
-  <div class='flat-button'>
-  Cafes/Dessert
-</div>
-</a>
 
     <script src="js/index.js"></script>
+
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+      <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+      <script src="js/menu.js"></script>
 </body>
 </html>

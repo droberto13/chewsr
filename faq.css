@@ -1,0 +1,69 @@
+@import url(http://fonts.googleapis.com/css?family=Mada);
+
+body {
+  color: #fff;
+  font-family: 'Mada';
+  font-size: 1em;
+  overflow-x: hidden;
+  padding: 0 1.5em;
+  text-align: center;
+}
+
+.faq-header{
+  font-size: 1.7em;
+  border-bottom: 1px dotted #ccc;
+  padding: 1em 0;
+  text-align: center;
+}
+
+.faq-c {
+  border-bottom: 1px dotted #ccc;
+  padding: 1em 0;
+  text-align: center;
+}
+
+
+.faq-t {
+  line-height: 1em;
+  color: #fff; 
+  font-family: sans-serif; 
+  float:left; 
+  text-align: center;
+}
+  font-weight: 700; 
+  padding-right: 0.3em; 
+  -webkit-transition: all 200ms;
+  -moz-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.faq-o {
+  transform: rotate(-45deg);
+  transform-origin: 50% 50%;
+  -ms-transform: rotate(-45deg);
+  -ms-transform-origin: 50% 50%;
+  -webkit-transform: rotate(-45deg);
+  -webkit-transform-origin: 50% 50%;
+  -webkit-transition: all 200ms;
+  -moz-transition: all 200ms;
+  transition: all 200ms;
+  text-align: center;
+
+}
+
+.faq-q {
+  cursor: pointer;
+  font-size: 1.5em;
+  font-weight: 100;
+  text-align: center;
+
+}
+
+.faq-a {
+  clear: both;
+  color: #fff;
+  display: center;
+  padding-left: 1.5em;
+  text-align: center;
+
+}

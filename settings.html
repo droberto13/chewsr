@@ -7,11 +7,12 @@
   
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-      <link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+      <link rel='stylesheet prefetch' href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
   
       <link rel="stylesheet" href="css/index.css">
       <link rel="stylesheet" href="css/title.css">
       <link rel="stylesheet" href="css/menu.css">
+      <link rel="stylesheet" href="css/faq.css">
     </head>
 
 
@@ -35,7 +36,7 @@
       
 
       <div align = "center">
-        <h2><font color="white">Settings</font></h2>
+        <h1><font color="white">Settings</font></h1>
       </div>
 
       <br>
@@ -52,9 +53,32 @@
         </div>
       </div>
 
-      <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-      <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+  <div class="faq-header">Help and FAQ</div>
+
+<div class="faq-c">
+  <div class="faq-q"><span class="faq-t">+</span>What does the "I'm Feeling Adventurous" button do?</div>
+  <div class="faq-a">
+    <p>It will randomly choose a category for you and then randomly choose an establishment for you. For the true explorers!</p>
+  </div>
+</div>
+
+<div class="faq-c">
+  <div class="faq-q"><span class="faq-t">+</span>What if I don't like any of the choices chosen for me?</div>
+  <div class="faq-a">
+    <p>Unfortunately, we utilize the Google Maps API to help search for places for you based on your current location or the location you specified. You can increase the distance radius to include more places, but it will also allow results much farther from you. This is where you'll have to explore by going to new areas.</p>
+  </div>
+</div>
+
+<div class="faq-c">
+  <div class="faq-q"><span class="faq-t">+</span>What if I'm feeling something else other than the categories listed?</div>
+  <div class="faq-a">
+    <p>Unforunately, we have not been able to incorporate every single kind of category of establishments yet. We intend to implement a search or filtering system in the future.</p>
+  </div>
+</div>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+      <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
       <script src="js/menu.js"></script>
+      <script src="js/faq.js"></script>
 
 
     </body>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
   <html >
     <head>
-	
-	<!-- Google Analytics Content Experiment code -->
+
+<!-- Google Analytics Content Experiment code -->
 <script>function utmx_section(){}function utmx(){}(function(){var
 k='134445326-0',d=document,l=d.location,c=d.cookie;
 if(l.search.indexOf('utm_expid='+k)>0)return;
@@ -17,21 +17,38 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 </script><script>utmx('url','A/B');</script>
 <!-- End of Google Analytics Content Experiment code -->
 
-	
+
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>CHEWSR: Random Restaurant Roulette</title>
+      <title>CHEWSR: Random Restaurant Chooser</title>
   
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-      <link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+      <link rel='stylesheet prefetch' href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
   
       <link rel="stylesheet" href="css/index.css">
       <link rel="stylesheet" href="css/title.css">
+      <link rel="stylesheet" href="css/menu.css">
+      <link rel="stylesheet" href="css/filters.css">
+
     </head>
 
 
     <body>
+    <header>
+      <button class="hamburger">&#9776;</button>
+  <button class="cross">&#735;</button>
+  </header>
+
+  <div class="menu">
+  <ul>
+    <a href="index.html"><li>Home</li></a>
+    <a href="about.html"><li>About Chewsr</li></a>
+    <a href="settings.html"><li>Settings</li></a>
+  </ul>
+</div>
+
+
 
     <div class="title">CHEWSR</div>
 
@@ -41,9 +58,8 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
         <h2><font color="white">Random Restaurant Chooser</font></h2>
       </div>
 
-      <br>
-      <br>
-      <br>
+
+  
 
       <SCRIPT Language="Javascript">
 
@@ -53,14 +69,11 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
           Url[0] = "japanese.html";
           Url[1] = "mexican.html";
           Url[2] = "chinese.html";
-          Url[3] = "burgers.html";
-          Url[4] = "italian.html";
-          Url[5] = "cafes.html";
-          Url[6] = "bars.html";
-          Url[7] = "american.html";
-          Url[8] = "fastfood.html";
-          Url[9] = "seafood.html";
-          Url[10] = "pizza.html";
+          Url[3] = "italian.html";
+          Url[4] = "cafes.html";
+          Url[5] = "bars.html";
+          Url[6] = "american.html";
+          Url[7] = "seafood.html";
 
           Chooselink = Math.round(Math.random() * (Url.length+1));
           window.open(Url[Chooselink],'_self');
@@ -68,36 +81,24 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
       </SCRIPT>
 
-      <div class="wrap">
-         <div class="search">
-            <input type="text" class="searchTerm" placeholder="Current Location or search for location">
-            <a href= "filters.html">
-              <button type="submit" class="searchButton">
-                <i class="fa fa-search"></i>
-             </button>
-           </a>
-         </div>
-      </div>
-<br>
-      <br>
-      <br>
-  <!--<div align="center">
-<A Href="#" onClick=" Randomlink (); return(false)">I'm Feeling Adventurous</A></div>-->
+<a href="filters.html">
+  <div class='flat-button'>
+    Search Current Location
+  </div>
+</a>
 
-      <div class="container">
-        <div class="slider">
-          <div align ="center"><font color= "white">Distance Radius (miles)</font>
-            <input type = "range" min="0" max="30" onchange="rangevalue.value=value"/>
-            <output id="rangevalue">15</output>
-          </div>
-        </div>
-      </div>
+<a href="#">
+  <div class='flat-button' onClick=" Randomlink (); return(false)">
+    I'm  Feeling Adventurous
+  </div>
+</a>
 
-      <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-      <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
 
-<div align="center">
-<a href="about.html"><font color="white">About</font></a></div>
+
+
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+      <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+      <script src="js/menu.js"></script>
 
 
 <script>

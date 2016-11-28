@@ -22,13 +22,19 @@
         <a class="rating" target="_blank"></a>
       </div>
       <div class='flat-button' button onclick="randomize()" id="reset">
-        Spin Again
+        Chews Again!
       </div>
-      <a href="filters.html">
-        <div class='flat-button'>
+      <a href="#">
+        <div class='flat-button' onclick="goBack()">
           Back
         </div>
       </a>
+
+      <script>
+          function goBack(){
+            window.history.back();
+          }
+      </script>
 
       <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     </div>
@@ -45,6 +51,6 @@
   ga('send', 'pageview');
 
 </script>
-    
+
   </body>
 </html>
